@@ -8,4 +8,4 @@ All content created by the workshop faculty, with minimal changes implemented to
 
 Website version hosted on: [rucowe.github.io/WPSG2025](https://rucowe.github.io/WPSG2025/)
 
-Repository of data for the excecises provided by the workshop faculty: [WPSG2025 on Dropbox](https://www.dropbox.com/scl/fo/azcq1lovgc9s80mlgt3s5/AEbrzMmMUGKs28X4Zff0Glw?rlkey=1xmdyl6lea5arz5aznh5kzojh&e=2&st=mf5uezfj&dl=0)
+Data for the excecises provided by the workshop faculty: [WPSG2025 on Dropbox](https://www.dropbox.com/scl/fo/azcq1lovgc9s80mlgt3s5/AEbrzMmMUGKs28X4Zff0Glw?rlkey=1xmdyl6lea5arz5aznh5kzojh&e=2&st=mf5uezfj&dl=0)
