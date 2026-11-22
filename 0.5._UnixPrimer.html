@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0159)https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/ -->
+<html lang="en-US" style="--wm-toolbar-height: 67px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./0.5_UnixPrimer_files/athena.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app246.us.archive.org';v.server_ms=354;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/wombat.js" charset="utf-8"></script>
+<script>window.RufflePlayer=window.RufflePlayer||{};window.RufflePlayer.config={"autoplay": "on", "showSwfDownload": true, "unmuteOverlay": "hidden"};</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/ruffle.js"></script><script type="text/javascript">
+    __wm.init("https://web.archive.org/web");
+  __wm.wombat("https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/","20260612210746","https://web.archive.org/","web","https://web-static.archive.org/_static/",
+	      "1781298466");
+</script>
+<link rel="stylesheet" type="text/css" href="./0.5_UnixPrimer_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="./0.5_UnixPrimer_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<script>window._wca = window._wca || [];</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>UNIX primer - Evolution and Genomics</title>
+	<link rel="canonical" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="UNIX primer - Evolution and Genomics">
+	<meta property="og:description" content="UNIX primer: tips, tricks, and more! Jakub Vlček, Daniela Souza-Costa, Angelica Cuevas, Angela P. Fuentes-Pardo, Julia M.I. Barth. 19th January 2025 UNIX primer slides Background and Objectives Welcome everyone! We ...">
+	<meta property="og:url" content="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/">
+	<meta property="og:site_name" content="Evolution and Genomics">
+	<meta property="article:publisher" content="https://www.facebook.com/groups/159177540764426/?ref=bookmarks">
+	<meta property="article:modified_time" content="2025-01-19T09:45:02+00:00">
+	<meta property="og:image" content="https://web.archive.org/web/20260612210746im_/http://evomics.org/wp-content/uploads/2012/01/dirStruct-300x225.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@evomics">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="20 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/","url":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/","name":"UNIX primer - Evolution and Genomics","isPartOf":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#website"},"primaryImageOfPage":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/#primaryimage"},"image":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/#primaryimage"},"thumbnailUrl":"https:\/\/web.archive.org\/web\/20260612210746\/http:\/\/evomics.org\/wp-content\/uploads\/2012\/01\/dirStruct-300x225.png","datePublished":"2024-12-17T09:33:56+00:00","dateModified":"2025-01-19T09:45:02+00:00","breadcrumb":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/#primaryimage","url":"https:\/\/web.archive.org\/web\/20260612210746\/http:\/\/evomics.org\/wp-content\/uploads\/2012\/01\/dirStruct-300x225.png","contentUrl":"https:\/\/web.archive.org\/web\/20260612210746\/http:\/\/evomics.org\/wp-content\/uploads\/2012\/01\/dirStruct-300x225.png"},{"@type":"BreadcrumbList","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/unix-primer\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/"},{"@type":"ListItem","position":2,"name":"LEARNING","item":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/"},{"@type":"ListItem","position":3,"name":"Population and Speciation Genomics","item":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/"},{"@type":"ListItem","position":4,"name":"Population and Speciation Genomics 2025","item":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/learning\/population-and-speciation-genomics\/2025-population-and-speciation-genomics\/"},{"@type":"ListItem","position":5,"name":"UNIX primer"}]},{"@type":"WebSite","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#website","url":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/","name":"Evolution and Genomics","description":"Intensive and immersive training opportunities","publisher":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#organization","name":"evomics","url":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#\/schema\/logo\/image\/","url":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/i0.wp.com\/evomics.org\/wp-content\/uploads\/2025\/06\/evomics_startpage.png?fit=1658%2C443&ssl=1","contentUrl":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/i0.wp.com\/evomics.org\/wp-content\/uploads\/2025\/06\/evomics_startpage.png?fit=1658%2C443&ssl=1","width":1658,"height":443,"caption":"evomics"},"image":{"@id":"https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/evomics.org\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/www.facebook.com\/groups\/159177540764426\/?ref=bookmarks","https:\/\/web.archive.org\/web\/20260612210746\/https:\/\/x.com\/evomics"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://web.archive.org/web/20260612210746/https://stats.wp.com/">
+<link rel="dns-prefetch" href="https://web.archive.org/web/20260612210746/https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://web.archive.org/web/20260612210746/https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://web.archive.org/web/20260612210746/https://v0.wordpress.com/">
+<link rel="preconnect" href="https://web.archive.org/web/20260612210746/https://i0.wp.com/">
+<link rel="alternate" type="application/rss+xml" title="Evolution and Genomics » Feed" href="https://web.archive.org/web/20260612210746/https://evomics.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Evolution and Genomics » Comments Feed" href="https://web.archive.org/web/20260612210746/https://evomics.org/comments/feed/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://web.archive.org/web/20260612210746/https://evomics.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fevomics.org%2Flearning%2Fpopulation-and-speciation-genomics%2F2025-population-and-speciation-genomics%2Funix-primer%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://web.archive.org/web/20260612210746/https://evomics.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fevomics.org%2Flearning%2Fpopulation-and-speciation-genomics%2F2025-population-and-speciation-genomics%2Funix-primer%2F&amp;format=xml">
+<style id="wp-img-auto-sizes-contain-inline-css" type="text/css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" id="olympus-shortcode-styles-css" href="./0.5_UnixPrimer_files/style.css" type="text/css" media="all">
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css" type="text/css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="cpsh-shortcodes-css" href="./0.5_UnixPrimer_files/shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="woocommerce-layout-css" href="./0.5_UnixPrimer_files/woocommerce-layout.css" type="text/css" media="all">
+<style id="woocommerce-layout-inline-css" type="text/css">
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+/*# sourceURL=woocommerce-layout-inline-css */
+</style>
+<link rel="stylesheet" id="woocommerce-smallscreen-css" href="./0.5_UnixPrimer_files/woocommerce-smallscreen.css" type="text/css" media="only screen and (max-width: 768px)">
+<link rel="stylesheet" id="woocommerce-general-css" href="./0.5_UnixPrimer_files/woocommerce.css" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel="stylesheet" id="onepress-fonts-css" href="./0.5_UnixPrimer_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="onepress-lightgallery-css" href="./0.5_UnixPrimer_files/lightgallery.css" type="text/css" media="all">
+<link rel="stylesheet" id="onepress-style-css" href="./0.5_UnixPrimer_files/theme.css" type="text/css" media="all">
+<style id="onepress-style-inline-css" type="text/css">
+.site-logo-div img{height:70px;width:auto}#main .video-section section.hero-slideshow-wrapper{background:transparent}.hero-slideshow-wrapper:after{position:absolute;top:0px;left:0px;width:100%;height:100%;background-color:rgba(255,255,255,0);display:block;content:""}#parallax-hero .jarallax-container .parallax-bg:before{background-color:rgba(255,255,255,0)}.body-desktop .parallax-hero .hero-slideshow-wrapper:after{display:none!important}#parallax-hero>.parallax-bg::before{background-color:rgba(255,255,255,0);opacity:1}.body-desktop .parallax-hero .hero-slideshow-wrapper:after{display:none!important}#footer-widgets{}.gallery-carousel .g-item{padding:0px 10px}.gallery-carousel-wrap{margin-left:-10px;margin-right:-10px}.gallery-grid .g-item,.gallery-masonry .g-item .inner{padding:10px}.gallery-grid-wrap,.gallery-masonry-wrap{margin-left:-10px;margin-right:-10px}.gallery-justified-wrap{margin-left:-20px;margin-right:-20px}
+/*# sourceURL=onepress-style-inline-css */
+</style>
+<link rel="stylesheet" id="jetpack-swiper-library-css" href="./0.5_UnixPrimer_files/swiper.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-carousel-css" href="./0.5_UnixPrimer_files/jetpack-carousel.css" type="text/css" media="all">
+<script type="text/javascript" src="./0.5_UnixPrimer_files/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/jquery.blockUI.min.js" id="wc-jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https://web.archive.org/web/20260612210746/https://evomics.org/cart/","is_cart":"","cart_redirect_after_add":"yes"};
+//# sourceURL=wc-add-to-cart-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/add-to-cart.min.js" id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/js.cookie.min.js" id="wc-js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/woocommerce.min.js" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/s-202624.js" id="woocommerce-analytics-js" defer="defer" data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://evomics.org/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://web.archive.org/web/20260612210746/https://evomics.org/wp-json/wp/v2/pages/20683"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://evomics.org/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://web.archive.org/web/20260612210746/https://wp.me/P1OhsE-5nB">
+	<style>img#wpstats{display:none}</style>
+			<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/cropped-evomics_logo_alone2.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/cropped-evomics_logo_alone2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon" href="https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/cropped-evomics_logo_alone2.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/cropped-evomics_logo_alone2.png?fit=270%2C270&amp;ssl=1">
+<link rel="stylesheet" id="wc-stripe-blocks-checkout-style-css" href="./0.5_UnixPrimer_files/upe-blocks.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-blocks-style-css" href="./0.5_UnixPrimer_files/wc-blocks.css" type="text/css" media="all">
+
+</head>
+
+<body class="wp-singular page-template-default page page-id-20683 page-child parent-pageid-20678 wp-custom-logo wp-theme-onepress theme-onepress woocommerce-js group-blog animation-disable"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr; height: 67px;" toolbar-mode="auto"><template shadowrootmode="closed"><div id="wm-ipp" style="position:fixed;left:0;top:0;right:0;">
+<div id="donato" style="position:relative;width:100%;height:0;">
+  <div id="donato-base">
+    <iframe id="donato-if" src="https://archive.org/includes/donate.php?as_page=1&amp;platform=wb&amp;referer=https%3A//web.archive.org/web/20260612210746/https%3A//evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" scrolling="no" frameborder="0" style="width:100%; height:100%">
+    </iframe>
+  </div>
+</div><div id="wm-ipp-inside">
+  <div id="wm-toolbar" style="position:relative;display:flex;flex-flow:row nowrap;justify-content:space-between;" nav="async">
+    <div id="wm-logo" style="/*width:110px;*/padding-top:12px;">
+      <a href="https://web.archive.org/web/" title="Wayback Machine home page"><img src="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png" srcset="https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-100.png, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-150.png 1.5x, https://web-static.archive.org/_static/images/toolbar/wayback-toolbar-logo-200.png 2x" alt="Wayback Machine" style="width:100px" border="0"></a>
+    </div>
+    <div class="c" style="display:flex;flex-flow:column nowrap;justify-content:space-between;flex:1;">
+      <form class="u" style="display:flex;flex-direction:row;flex-wrap:nowrap;" target="_top" method="get" action="https://web.archive.org/web/submit" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" onfocus="this.focus();this.select();" style="flex:1;" autocomplete="off"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20260612210746"><input type="submit" value="Go">
+      </form>
+      <div style="display:flex;flex-flow:row nowrap;align-items:flex-end;">
+                <div class="s" id="wm-nav-captures" style="flex:1;"><a class="t" href="https://web.archive.org/web/*/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="See a list of every capture for this URL">10 captures</a><div class="r" title="Timespan for captures of this URL">25 Jan 2025 - 12 Jun 2026</div></div>
+        <div class="k">
+          <a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" id="wm-graph-anchor">
+            <div id="wm-ipp-sparkline" title="Explore captures for this URL" style="position: relative">
+              <canvas id="wm-sparkline-canvas" width="775" height="27" border="0"></canvas>
+            <div class="yt" style="display: none; width: 25px; height: 27px;"></div><div class="mt" style="display: none; width: 2px; height: 27px;"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="n">
+      <table>
+        <tbody>
+          <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+          <tr class="m">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20260218024852/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="02:48:52 Feb 18, 2026">Feb</a></td>
+            <td class="c" id="displayMonthEl" title="You are here: 21:07:46 Jun 12, 2026">JUN</td>
+            <td class="f" nowrap="nowrap">Jul</td>
+          </tr>
+          <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+          <tr class="d">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20260218024852/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="02:48:52 Feb 18, 2026"><span class="ta"></span></a></td>
+            <td class="c" id="displayDayEl" style="width:34px;font-size:22px;white-space:nowrap;" title="You are here: 21:07:46 Jun 12, 2026">12</td>
+            <td class="f" nowrap="nowrap"><span class="ta"></span></td>
+          </tr>
+          <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+          <tr class="y">
+            <td class="b" nowrap="nowrap"><a href="https://web.archive.org/web/20250512122839/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="12:28:39 May 12, 2025">2025</a></td>
+            <td class="c" id="displayYearEl" title="You are here: 21:07:46 Jun 12, 2026">2026</td>
+            <td class="f" nowrap="nowrap">2027</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="r" style="display:flex;flex-flow:column nowrap;align-items:flex-end;justify-content:space-between;">
+      <div id="wm-btns" style="text-align:right;height:23px;">
+                <span class="xxs">
+          <div id="wm-save-snapshot-success">success</div>
+          <div id="wm-save-snapshot-fail">fail</div>
+          <a id="wm-save-snapshot-open" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" title="Share via My Web Archive">
+            <span class="iconochive-web"></span>
+          </a>
+          <a href="https://archive.org/account/login.php" title="Sign In" id="wm-sign-in">
+            <span class="iconochive-person"></span>
+          </a>
+          <span id="wm-save-snapshot-in-progress" class="iconochive-web"></span>
+        </span>
+                <a class="xxs" href="https://help.archive.org/help/category/the-wayback-machine/" title="Get some help using the Wayback Machine" style="top:-6px;"><span class="iconochive-question" style="color:rgb(87,186,244);font-size:160%;"></span></a>
+        <a id="wm-tb-close" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#close" style="top:-2px;" title="Close the toolbar"><span class="iconochive-remove-circle" style="color:#888888;font-size:240%;"></span></a>
+      </div>
+      <div id="wm-share" class="xxs">
+        <a href="https://web.archive.org/web/20260612210746/http://web.archive.org/screenshot/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" id="wm-screenshot" title="screenshot" style="visibility: hidden;">
+          <span class="wm-icon-screen-shot"></span>
+        </a>
+        <a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" id="wm-video" title="video">
+          <span class="iconochive-movies"></span>
+        </a>
+        <a id="wm-share-facebook" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" data-url="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="Share on Facebook" style="margin-right:5px;" target="_blank"><span class="iconochive-facebook" style="color:#3b5998;font-size:160%;"></span></a>
+        <a id="wm-share-twitter" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" data-url="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/" title="Share on Twitter" style="margin-right:5px;" target="_blank"><span class="iconochive-twitter" style="color:#1dcaff;font-size:160%;"></span></a>
+      </div>
+      <div style="padding-right:2px;text-align:right;white-space:nowrap;">
+        <a id="wm-expand" class="wm-btn wm-closed" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#expand"><span id="wm-expand-icon" class="iconochive-down-solid"></span> <span class="xxs" style="font-size:80%;">About this capture</span></a>
+      </div>
+    </div>
+  </div>
+    <div id="wm-capinfo" style="border-top:1px solid #777;display:none; overflow: hidden">
+        <div id="wm-capinfo-notice" source="api"></div>
+                <div id="wm-capinfo-collected-by" source="api" trigger="hover" token="MUCo55g9vcIVsix293iLKi9b8d8Czg2zV19GU7RLoP7ajxVIS1LUM_CK8AUsMIGIp0cKJQ"></div>
+    <div id="wm-capinfo-timestamps">
+    <div style="background-color:#666;color:#fff;font-weight:bold;text-align:center;padding:2px 0;" title="Timestamps for the elements of this page">TIMESTAMPS</div>
+    <div>
+      <div id="wm-capresources" style="margin:0 5px 5px 5px;max-height:250px;overflow-y:scroll !important"></div>
+      <div id="wm-capresources-loading" style="text-align:left;margin:0 20px 5px 5px;display:none"><img src="https://web-static.archive.org/_static/images/loading.gif" alt="loading"></div>
+    </div>
+    </div>
+  </div></div></div><link rel="stylesheet" type="text/css" href="./0.5_UnixPrimer_files/banner-styles.css"><link rel="stylesheet" type="text/css" href="./0.5_UnixPrimer_files/iconochive.css"><div class="wb-autocomplete-suggestions "></div></template>
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/</div>
+<script type="text/javascript">//<![CDATA[
+__wm.bt(775,27,25,2,"web","https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/","20260612210746",1996,"https://web-static.archive.org/_static/",["https://web-static.archive.org/_static/css/banner-styles.css?v=1utQkbB3","https://web-static.archive.org/_static/css/iconochive.css?v=3PDvdIFv"], false);
+  __wm.rw(1);
+//]]></script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#content">Skip to content</a>
+	<div id="header-section" class="h-on-top no-transparent">		<header id="masthead" class="site-header header-contained is-sticky no-scroll no-t h-on-top" role="banner">
+			<div class="container">
+				<div class="site-branding">
+					<div class="site-brand-inner has-logo-img no-desc"><div class="site-logo-div"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/" class="custom-logo-link  no-t-logo" rel="home" itemprop="url"><img width="1658" height="443" src="./0.5_UnixPrimer_files/evomics_startpage.png" class="custom-logo" alt="Evolution and Genomics" itemprop="logo" decoding="async" srcset="https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?w=1658&amp;ssl=1 1658w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?resize=300%2C80&amp;ssl=1 300w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?resize=1024%2C274&amp;ssl=1 1024w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?resize=768%2C205&amp;ssl=1 768w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?resize=1536%2C410&amp;ssl=1 1536w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?resize=532%2C142&amp;ssl=1 532w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?w=1600&amp;ssl=1 1600w" sizes="(max-width: 1658px) 100vw, 1658px" data-attachment-id="21040" data-permalink="https://web.archive.org/web/20260612210746/https://evomics.org/evomics_startpage/" data-orig-file="https://web.archive.org/web/20260612210746/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?fit=1658%2C443&amp;ssl=1" data-orig-size="1658,443" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="evomics_startpage" data-image-description="" data-image-caption="" data-large-file="https://web.archive.org/web/20260612210746/https://i0.wp.com/evomics.org/wp-content/uploads/2025/06/evomics_startpage.png?fit=800%2C214&amp;ssl=1"></a></div></div>				</div>
+				<div class="header-right-wrapper">
+					<a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#0" id="nav-toggle">Menu<span></span></a>
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<ul class="onepress-menu">
+							<li id="menu-item-6855" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6855"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/">Workshops</a>
+<ul class="sub-menu">
+	<li id="menu-item-6909" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6909"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/">Workshop on Genomics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-21014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21014"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2026-workshop-on-genomics/">2026 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-20396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20396"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2025-workshop-on-genomics/">2025 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-19912" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19912"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2024-workshop-on-genomics/">2024 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-19626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19626"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2023-workshop-on-genomics-cesky-krumlov/">2023 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-19029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19029"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2022-workshop-on-genomics-cesky-krumlov/">2022 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-8614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8614"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2020-workshop-on-genomics-cesky-krumlov-czech-republic/">2020 Workshop on Genomics, Cesky Krumlov, Czech Republic</a></li>
+		<li id="menu-item-8221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8221"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2019-workshop-on-genomics-cesky-krumlov/">2019 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-7594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7594"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2018-workshop-on-genomics-cesky-krumlov/">2018 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6898"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2017-workshop-on-genomics-cesky-krumlov/">2017 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-7035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7035"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2016-workshop-on-genomics-cesky-krumlov/">2016 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6901"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2015-workshop-on-genomics-cesky-krumlov/">2015 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6902"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2014-workshop-on-genomics-cesky-krumlov/">2014 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6907"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2012-genomics-cesky-krumlov/">2012 Workshop on Genomics, Český Krumlov</a></li>
+		<li id="menu-item-6913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6913"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2013-workshop-on-genomics-cesky-krumlov/">2013 Workshop on Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6904"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2011-genomics-cesky-krumlov/">2011 Workshop on Genomics, Český Krumlov</a></li>
+		<li id="menu-item-6905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6905"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2011-genomics-fort-collins/">2011 Workshop on Genomics, Fort Collins</a></li>
+		<li id="menu-item-6906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6906"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-genomics/2011-genomics-smithsonian-institution/">2011 Workshop on Genomics, Smithsonian Institution</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6999" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6999"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-population-and-speciation-genomics/">Workshop on Population and Speciation Genomics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-20421" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20421"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-population-and-speciation-genomics/2025-workshop-on-population-and-speciation-genomics-cesky-krumlov/">2025 Workshop on Population and Speciation Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-19028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19028"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2022-workshop-on-population-and-speciation-genomics-cesky-krumlov/">2022 Workshop on Population and Speciation Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-8619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8619"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2020-workshop-on-population-and-speciation-genomics-cesky-krumlov/">2020 Workshop on Population and Speciation Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-7602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7602"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-population-and-speciation-genomics/2018-workshop-on-population-and-speciation-genomics-cesky-krumlov/">2018 Workshop on Population and Speciation Genomics, Cesky Krumlov</a></li>
+		<li id="menu-item-6918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6918"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/2016-workshop-on-population-and-speciation-genomics-cesky-krumlov/">2016 Workshop on Population and Speciation Genomics, Cesky Krumlov</a></li>
+	</ul>
+</li>
+	<li id="menu-item-7049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7049"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshop-on-phylogenomics/">Workshop on Phylogenomics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-19663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19663"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2024-workshop-on-phylogenomics-cesky-krumlov/">2024 Workshop on Phylogenomics, Cesky Krumlov</a></li>
+		<li id="menu-item-8220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8220"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/2019-workshop-on-phylogenomics-cesky-krumlov/">2019 Workshop on Phylogenomics, Cesky Krumlov</a></li>
+		<li id="menu-item-7046" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7046"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/2017-workshop-on-phylogenomics-cesky-krumlov/">2017 Workshop on Phylogenomics, Cesky Krumlov</a></li>
+	</ul>
+</li>
+	<li id="menu-item-7004" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7004"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-molecular-evolution/">Workshop on Molecular Evolution</a>
+	<ul class="sub-menu">
+		<li id="menu-item-6896" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6896"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-molecular-evolution/2015-workshop-on-molecular-evolution-cesky-krumlov/">2015 Workshop on Molecular Evolution, Cesky Krumlov</a></li>
+		<li id="menu-item-6922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6922"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-molecular-evolution/2013-evolution-cesky-krumlov/">2013 Workshop on Molecular Evolution, Český Krumlov</a></li>
+		<li id="menu-item-6920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6920"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-molecular-evolution/2011-evolution-cesky-krumlov/">2011 Workshop on Molecular Evolution, Český Krumlov</a></li>
+		<li id="menu-item-6919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6919"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/workshop-on-molecular-evolution/2011-evolution-fort-collins/">2011 Workshop on Molecular Evolution, Fort Collins</a></li>
+	</ul>
+</li>
+	<li id="menu-item-6929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6929"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/harvard-university-workshops/">Harvard University Workshops</a>
+	<ul class="sub-menu">
+		<li id="menu-item-7639" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7639"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/2017-workshop-on-transcriptomics-harvard-university/">2017 Workshop on Transcriptomics, Harvard University</a></li>
+		<li id="menu-item-7096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7096"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/2016-workshop-on-microbial-genomics-harvard-university/">2016 Workshop on Microbial Genomics, Harvard University</a></li>
+		<li id="menu-item-6928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6928"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/harvard-university-workshops/2015-harvard-university-workshop-on-metagenomics/">2015 Harvard University Workshop on Metagenomics</a></li>
+		<li id="menu-item-6927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6927"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/harvard-university-workshops/2014-hu-cfar/">2014 HU-CFAR Metagenomics and Transcriptomics</a></li>
+	</ul>
+</li>
+	<li id="menu-item-8247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8247"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/2019-workshop-on-microbiome-and-transcriptome-analysis-south-africa/">Workshop on Microbiome and Transcriptome Analysis, Durban, South Africa</a></li>
+	<li id="menu-item-7007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7007"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/advanced-topics/">Advanced Topics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-6924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6924"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/advanced-topics/bioconductor/">Advanced Topic: Bioconductor</a></li>
+		<li id="menu-item-6926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6926"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/advanced-topics/programming/">Biopython</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-6970" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-6970"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/">Learning</a>
+<ul class="sub-menu">
+	<li id="menu-item-6978" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6978"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/unix-tutorial/">UNIX Tutorial</a></li>
+	<li id="menu-item-6974" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6974"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/genomics-preparation/">Genomics</a></li>
+	<li id="menu-item-6975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6975"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/phylogenetics/">Phylogenetics</a></li>
+	<li id="menu-item-6976" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6976"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/">Population and Speciation Genomics</a>
+	<ul class="sub-menu">
+		<li id="menu-item-20681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20681"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/">2025 Population and Speciation Genomics</a></li>
+		<li id="menu-item-19356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19356"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2022-population-and-speciation-genomics/">2022 Population and Speciation Genomics</a></li>
+		<li id="menu-item-11294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11294"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2020-population-and-speciation-genomics/">2020 Population and Speciation Genomics</a></li>
+		<li id="menu-item-7902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7902"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2018-population-and-speciation-genomics/">2018 Population and Speciation Genomics</a></li>
+		<li id="menu-item-7919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7919"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2016-population-and-speciation-genomics/">2016 Population and Speciation Genomics</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-6932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6932"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/people/">People</a>
+<ul class="sub-menu">
+	<li id="menu-item-6933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6933"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/people/faculty/">Faculty</a></li>
+	<li id="menu-item-21066" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21066"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/evomics-faculty-alumni/">Evomics Faculty Alumni</a></li>
+	<li id="menu-item-6934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6934"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/people/instructors/">Instructors</a></li>
+	<li id="menu-item-6935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6935"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/people/participants/">Participants</a></li>
+</ul>
+</li>
+<li id="menu-item-6856" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6856"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/registration-form/">Apply</a></li>
+<li id="menu-item-6857" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6857"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/information/">Information</a>
+<ul class="sub-menu">
+	<li id="menu-item-6916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6916"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/faq/">FAQ</a></li>
+	<li id="menu-item-19634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19634"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/bursaries/">Equal Opportunities Funding</a></li>
+	<li id="menu-item-6954" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6954"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/workshops/housing-dining-transportation/">Housing, Dining, and Transportation</a></li>
+	<li id="menu-item-6936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6936"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/preperation/">Preparation</a></li>
+	<li id="menu-item-7016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7016"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/?page_id=3744">Partners</a></li>
+	<li id="menu-item-8644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8644"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/information/code-of-conduct/">Code of Conduct</a></li>
+	<li id="menu-item-10656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10656"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/policies/">Policies</a></li>
+	<li id="menu-item-10657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10657"><a href="https://web.archive.org/web/20260612210746/https://evomics.org/support/">Support</a></li>
+</ul>
+</li>
+						</ul>
+					</nav>
+
+				</div>
+			</div>
+		</header>
+		</div>							<div class="page-header">
+					<div class="container">
+						<h1 class="entry-title">UNIX primer</h1>					</div>
+				</div>
+						<div id="content" class="site-content">
+        			<div class="breadcrumbs">
+				<div class="container">
+									</div>
+			</div>
+					<div id="content-inside" class="container no-sidebar">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">
+
+					
+						
+<article id="post-20683" class="post-20683 page type-page status-publish hentry">
+	<header class="entry-header">
+			</header>
+
+	<div class="entry-content">
+		<p>	<!-- Additional CSS --></p>
+<style>
+	code {
+		font-family: 'Liberation Mono', monospace;
+		color: #c10000;
+		background-color: #eeeeee;
+		font-size: 80%;
+	}
+	ques {
+		font-family: 'Liberation Mono', monospace;
+		font-weight: bold;
+		color: #000000;
+		font-size: 150%;
+	}
+	</style>
+<p>	<!-- Notes 
+		Use <code> SOMECODE </code> for all commands or things that are typeable in the terminal.
+		Use <ques> Q </ques> to indicate questions.
+		'xxx' marks things still to be done, completed, or fixed.
+		<br /> is not working in wordpress, for a line break use: 
+
+<p class="">
+
+
+	--><br>
+<br>
+<!-- HTML page --><script defer="" src="./0.5_UnixPrimer_files/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;d8ab6d2d664d4b9fbfd9117a63bd271e&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+</p>
+<h2>UNIX primer: tips, tricks, and more!</h2>
+<p>Jakub Vlček, Daniela Souza-Costa, Angelica Cuevas, Angela P. Fuentes-Pardo, Julia M.I. Barth. 19th January 2025</p>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/wp-content/uploads/2025/01/UNIX-primer-2025.pdf" rel="noopener noreferrer" target="_blank">UNIX primer slides</a></li>
+<p class="">
+</p><p><b>Background and Objectives</b></p>
+<p> Welcome everyone!<br>
+		We have prepared this UNIX activity to get all of you to the same level, as you will use the Terminal a lot during this workshop. Depending on your level, this activity will take more or less time. 		</p>
+<p>Learning goals:</p>
+<ul>
+<ul>
+<li> Navigate in the UNIX environment </li>
+<li> Create, move and delete directories </li>
+<li> Create, move, delete and edit files </li>
+<li> Use basic UNIX commands and know where to find help </li>
+</ul>
+</ul>
+<p><b>Why would we use the Terminal / shell in the first place?</b></p>
+<p> <i>Scripting</i>: We can write down a sequence of commands to perform particular tasks or analyses;<br>
+	 when working with genomic data, a task usually takes minutes, sometimes hours or even days – it’s no fun to sit and wait in front of your computer this long just for a mouse-click to initiate the next task.</p>
+<p>	<i>Powerful Tools</i>: In UNIX, powerful tools are available that enable you to work through large amounts of files, data, and tasks quite quickly and in an automated (that is, programmatic) way. </p>
+<p>	<i>Easy remote access</i>: In most cases, it is not possible anymore to deal with genomic data on a desktop computer. You will usually run analyses on clusters at high performance computing facilities at your university, or – like in this course – on the Amazon cluster.</p>
+<p>	<i>A GUI (Graphical User Interface) is not available for many programs</i>: Genomics is a fast evolving field and developing a GUI takes time and effort.</p>
+<p>	<i>Compatibility</i>: The terminal can (remotely) be accessed with computers running on different operating systems</p>
+<p><b>Basic syntax of shell commands</b></p>
+<p> UNIX or shell commands have a basic structure of:<br>
+		<code>command -options target</code><br>
+		The command comes first (such as <code>cd</code> or <code>ls</code> as we will see later) then any options (always proceeded by a <code>–</code> and also called flags) and then the target (such as the file to move or the directory to list). These commands are written on the prompt (terminal command line).</p>
+<p><b>How to do this activity</b></p>
+<ul>
+<li>Connect to your <!-- <a href="https://evomics.org/learning/population-and-speciation-genomics/2022-population-and-speciation-genomics/amazon-instances/" rel="noopener noreferrer" target="_blank"> --> Amazon instance via the terminal using SSH.</li>
+<li>Questions or tasks are indicated with <ques> Q </ques>.</li>
+<li>All text in <code>red with gray background</code> indicates commands that you can type or copy to the terminal.</li>
+<li>If you get stuck, check the answer-box:</li>
+</ul>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+			Oh no, only if you get stuck!! First try to find the answer yourself!<br>
+		</div></div>
+<hr \="">
+<p><!-- TOC --><br>
+<b> Table of contents </b> </p>
+<ul style="list-style-type:none">
+<ol>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex1">Find your keys!</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex2">Getting help</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex3">Navigation I</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex4">Navigation II</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex5">Managing your directories and files</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex6">View and manipulate files</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex7">Tips and tricks</a></li>
+<li><a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#ex8">Writing a script</a></li>
+</ol>
+</ul>
+<hr \="">
+<p><!-- ---------- Exercise 1 ---------- --><br>
+<b> 1) Find your keys! <a name="ex1"></a> </b></p>
+<p>There are some keys that are used a lot in UNIX commands but can be difficult to find on some keyboards.</p>
+<p><ques> Q </ques> Open a text editor and type the following keys:</p>
+<p><code>~</code> <a href="https://web.archive.org/web/20260612210746/https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion">tilde</a></p>
+<p><code>/</code> <a href="https://web.archive.org/web/20260612210746/http://www.cs.ucsb.edu/~pconrad/topics/BackslashVsForwardSlash">forward slash</a></p>
+<p><code>\</code> <a href="https://web.archive.org/web/20260612210746/https://www.gnu.org/software/bash/manual/html_node/Escape-Character.html#Escape-Character"> back slash or escape</a></p>
+<p><code>|</code> <a href="https://web.archive.org/web/20260612210746/https://www.gnu.org/software/bash/manual/html_node/Pipelines.html#Pipelines"> vertical bar or pipe</a></p>
+<p><code>#</code> hash or number or gate sign</p>
+<p><code>$</code> dollar sign</p>
+<p><code>*</code> <a href="https://web.archive.org/web/20260612210746/http://www.tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm"> asterisk</a></p>
+<p><code>’</code> <a href="https://web.archive.org/web/20260612210746/https://www.gnu.org/software/bash/manual/html_node/Single-Quotes.html"> single quote</a></p>
+<p><code>"</code> <a href="https://web.archive.org/web/20260612210746/https://www.gnu.org/software/bash/manual/html_node/Double-Quotes.html"> double quote</a></p>
+<p><code>`</code> <a href="https://web.archive.org/web/20260612210746/https://unix.stackexchange.com/questions/27428/what-does-backquote-backtick-mean-in-commands"> backtick</a></p>
+<p><code>ctrl c</code> <a href="https://web.archive.org/web/20260612210746/https://en.wikipedia.org/wiki/Control-C">  The panic button</a>: If you are running a process or program and it is stuck or doing something you don’t want it to do: then hold the control key and press c. This will kill the current process and return you to your prompt.</p>
+<hr \="">
+<p><!-- ---------- Exercise 2 ---------- --><br>
+<b> 2) Getting help <a name="ex1"></a> </b></p>
+<p> A UNIX cheat sheet like <a href="https://web.archive.org/web/20260612210746/https://files.fosswire.com/2007/08/fwunixref.pdf" target="_blank" rel="noopener noreferrer"> this one here </a> might be helpful as a reference of some of the most common UNIX commands.<br>
+	Also, never forget that the internet is your best friend!<br>
+        And currently, generative artificial intelligence is a pretty powerful friend for bioinformaticians.<br>
+        You can ask <a href="https://web.archive.org/web/20260612210746/https://chatgpt.com/" target="_blank">chatGPT </a> what are the key skills to analyze genomic data? (You would have to register if you have not done it, yet.)<br>
+	Most UNIX commands and many other programs have help pages accessed through: <code>command_name --help</code>, or <code>command_name -h</code>, which also describe different ways to run a program.<br>
+	Most programs also have a more exhaustive manual page accessed by typing <code>man PROGRAM_NAME</code>. </p>
+<p> <ques>Q</ques> Access the <code>ls</code> help page and the <code>ls</code> manual page.</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		If you haven’t done it yet, open a terminal window and <a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2022-population-and-speciation-genomics/amazon-instances/" rel="noopener noreferrer" target="_blank">login to your Amazon instance using ssh</a>:<br>
+		<code>ssh wpsg@ec2-XX-XXX-XXX-XXX.compute-1.amazonaws.com</code><p></p>
+<p>		Type <code>ls --help</code> to access the “list” help page.<br>
+		Type <code>man ls</code> to access the “list” manual page.</p>
+<p>		Note that if you type <code>ls -h</code> you don’t get the help page for <code>ls</code>. That’s because <code>-h</code> is the option that print sizes of files in a human-readable format (like 1K, 234M, 2G etc) when combined with the <code>-l</code> option, like in <code>ls -lh</code>. Find the <code>-h</code> option when you access the <code>ls</code> help page with <code>ls --help</code><br>
+	</p></div></div>
+<p class="">
+</p><p> <ques>Q</ques> What do the <code>cp</code>, <code>vim</code> and <code>nano</code> commands do? </p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+     	<code>man cp</code>: copy files<br>
+     	<code>man vim</code>: “Vi IMproved” – a text editor<br>
+     	<code>man nano</code>: “Nano’s ANOther editor” – a text editor<br>
+     	To exit the man page press <code>q</code><br>
+     </div></div>
+<hr \="">
+<p><!-- ---------- Exercise 3 ---------- --><br>
+<b> 3) Navigation I <a name="ex3"></a> </b></p>
+<p>A computer file system is laid out as a hierarchical multifurcating tree structure. This may sound confusing but it is easy to think of it as boxes of boxes where each box is a directory.<br>
+There is one big box called the root. All other boxes are contained in this one big box. Boxes have labels such as ‘Users’ or ‘Applications’. Each box may contain more boxes (like Desktop or Downloads or Work) or files (like ‘file1.txt’ or ‘draft.docx’)<br>
+Thus it is hierarchical (boxes in boxes), multifurcating (each box can contain multiple boxes or files) tree structure (similar to how a tree has branches and leaves).</p>
+<p>	<a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/unix-tutorial/dirstruct/" ;;="" rel="attachment wp-att-5979"><img data-recalc-dims="1" decoding="async" data-attachment-id="5979" data-permalink="https://web.archive.org/web/20260612210746/https://evomics.org/learning/unix-tutorial/dirstruct/" data-orig-file="https://web.archive.org/web/20260612210746/https://i0.wp.com/evomics.org/wp-content/uploads/2012/01/dirStruct.png?fit=720%2C540&amp;ssl=1" data-orig-size="720,540" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="directoryStruct" data-image-description="" data-image-caption="" data-large-file="https://web.archive.org/web/20260612210746/https://i0.wp.com/evomics.org/wp-content/uploads/2012/01/dirStruct.png?fit=720%2C540&amp;ssl=1" class="aligncenter size-medium wp-image-5979" src="./0.5_UnixPrimer_files/dirStruct.png" ;;="" alt="directoryStruct" width="300" height="225" srcset="https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2012/01/dirStruct.png?resize=300%2C225&amp;ssl=1 300w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2012/01/dirStruct.png?resize=532%2C399&amp;ssl=1 532w, https://web.archive.org/web/20260612210746im_/https://i0.wp.com/evomics.org/wp-content/uploads/2012/01/dirStruct.png?w=720&amp;ssl=1 720w" sizes="(max-width: 300px) 100vw, 300px"></a></p>
+<p>There are two ways to refer to directories and their positions in this hierarchy and relationship to other directories: absolute and relative paths. </p>
+<p class="">
+</p><p>A) Absolute path<br>
+The absolute path is the list of all directories starting from the root that lead to the current directory. Directories are separated using a <code>/</code>.</p>
+<p>For example, the path to the directory ‘wpsg’ is <code>/home/wpsg/</code></p>
+<p><ques> Q </ques> What is the absolute path to the directory ‘software’?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+     	<code>/home/wpsg/software</code><br>
+     </div></div>
+<p class="">
+</p><p>B) Relative path<br>
+A directory can also be referred to by its relative location from some other directory (usually where you are working from). The parent of a directory is referred to using <code>..</code><br>
+The current directory is referred to using <code>.</code><br>
+For example, if I am in ‘software’ and want to get to ‘workshop_materials’ the relative path is <code>../workshop_materials/</code></p>
+<p><ques> Q </ques> What is the relative path from ‘software’ to ‘wpsg’?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+     <code>..</code><br>
+     </div></div>
+<hr \="">
+<p><!-- ---------- Exercise 4 ---------- --><br>
+<b> 4) Navigation II <a name="ex4"></a> </b></p>
+<p> <ques>Q</ques> Go from your home directory to ‘plink’ (in the ‘software’ directory)<br>
+The Home directory is where you are upon login (/home/wpsg/).<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cd</code> stands for ‘change directory’:<br>
+		<code>cd software/plink/</code><br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques>  Go back to your home directory<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		Using the absolute path:<br>
+		<code>cd /home/wpsg/</code><br>
+		Using the relative path:<br>
+		<code>cd ../../</code><br>
+		Using a really useful shortcut:<br>
+		<code>cd ~</code><br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques>  Go again to ‘software/plink’<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cd software/plink</code><br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Check where you are (print the absolute path)<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>pwd</code> pwd stands for ‘print working directory’<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> List all the items in current directory<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>ls</code><br>
+		ls stands for ‘list directory content’<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Check the file sizes of items in the current directory<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>ls -l</code> The flag <code>-l</code> specifies a ‘long listing format’. It returns the columns: permissions, number of hardlinks, file owner, file group, file size in bytes, modification date, filename.<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Check them in human readable format<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>ls -lh</code><br>
+For more information on <code>ls</code> check the man pages: <code>man ls</code><br>
+	</div></div>
+<p></p>
+<p class="">
+</p><hr \="">
+<p><!-- ---------- Exercise 5 ---------- --><br>
+<b> 5) Managing your directories and files <a name="ex5"></a> </b></p>
+<p> A new folder can be created using <code>mkdir</code> “make directory”.</p>
+<p> <ques>Q</ques> From your home directory, create a new directory called unix_tutorial<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>mkdir unix_tutorial</code><br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Create an empty text file called file1.txt using <code>touch</code><br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>touch file1.txt</code><br>
+Tip: <code>touch</code> can also be used to update the access date of a file or directory.<br>
+	</div></div>
+<p></p>
+<p> Editing files in the terminal is a bit tedious but you’ll learn quickly!<br>
+<a href="https://web.archive.org/web/20260612210746/https://www.nano-editor.org/" target="_blank" rel="noopener noreferrer">nano</a> and <a href="https://web.archive.org/web/20260612210746/https://www.vim.org/" rel="noopener noreferrer" target="_blank">vim</a> are useful text editors: </p>
+<p> <ques>Q</ques> Edit file1.txt using <code>vim</code> and write ‘Hello Workshop team’<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>vi file1.txt</code> or <code>vim file1.txt</code><br>
+		<code>i</code> [for insert mode]
+		Type: ‘Hello Workshop team’<br>
+		<code>ESC</code> to escape the ‘insert mode’<br>
+		<code>:q</code> to exit vim without saving modifications to the file, use <code>:wq</code> to save.<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Edit file1.txt using <code>nano</code> and write ‘Hello fellow participants’ in the second line<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>nano file1.txt</code><br>
+		<code>ENTER</code> to access the second line<br>
+		Write: ‘Hello fellow participants’<br>
+		<code>ctrl o</code> to save, ^ corresponds to ctrl in case you were wondering 🙂<br>
+		<code>ENTER</code> to validate saving<br>
+		<code>ctrl x</code> to exit<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Copy file1.txt to the ‘unix_tutorial’ directory, name this copy file2.txt<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cp file1.txt unix_tutorial/file2.txt</code><br>
+                <code>cp</code> stands for ‘copy’<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Rename file1.txt to myfile1.txt<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>mv file1.txt myfile1.txt</code><br>
+                the command <code>mv</code> stands for ‘move’<br>
+                it is the same command to move or to rename a file (‘move’ a file in the current directory with a different output name)<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Move myfile1.txt to the ‘unix_tutorial’ folder<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>mv myfile1.txt unix_tutorial/</code><br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Go to ‘unix_tutorial’ and delete the file file2.txt<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cd unix_tutorial</code><br>
+		<code>rm file2.txt</code><br>
+                <code>rm</code> stands for ‘remove’<br>
+	</div></div>
+<p></p>
+<p> <ques>Q</ques> Go one directory down and delete the ‘unix_tutorial’ folder<br>
+	</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cd ..</code><br>
+		<code>rm unix_tutorial</code><br>
+		This returns an error, only using <code>rm</code> is not possible to remove a directory, a flag that allows deleting a directory and its content is needed.<br>
+		<code>rm -ri unix_tutorial</code><br>
+		The <code>-r</code> flag remove directories and their contents recursively and <code>-i</code> tells the command to ask for permission to delete.<br>
+		To delete an empty directory, you can also use rmdir.<br>
+</div></div>
+<p></p>
+<p> There is no ‘undo’ or ‘trash folder’ in the terminal, so be very careful when deleting files or directories!<br>
+It is a good practice to use the <code>-i</code> flag as a safety step with the <code>rm</code> (e.g.,:<code>rm -i file1.txt</code>)</p>
+<hr>
+<p><!-- ---------- Exercise 6 ---------- --><br>
+<b> 6) View and manipulate files <a name="ex6"></a> </b></p>
+<p> For the next exercise, you are going to need the text file Test_file_genomics_data.txt, which is located in the directory <code>~/workshop_materials/19_unix_primer/</code>.<br>
+Go there</p>
+<p>There are several ways to view the content of a file:
+</p>
+<p><code>cat</code> will print the whole file. It can be useful for viewing small files and as a part of computational processing using the pipe <code>|</code>, but it is not suitable for viewing large files.<br>
+	Remember, you can always use <code>ctrl c</code> to kill the task.
+	</p>
+<p><code>less</code> prints the content of a file on one screen length at a time</p>
+<p>Within ‘less’:</p>
+<p>	<code>ENTER</code> displays the next line<br>
+	<code>k</code> displays the previous line<br>
+	<code>SPACE</code> displays the next page<br>
+	<code>b</code> displays the previous page<br>
+	<code>shift g</code> prints the end of the file<br>
+	<code>q</code> to exit
+	</p>
+<p>If a file contains very long lines, these lines will wrap to fit the screen width. This can result in a confusing display, especially if there are, for example, long sequences in your file. To chop the lines and only display the beginning of each line we can use:
+</p>
+<p>	<code>less -S <filename></filename></code></p>
+<p>You can scroll horizontally across lines using the arrow keys. </p>
+<p>	<ques>Q</ques> explore the example file using less and cat</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cat Test_file_genomics_data.txt</code><br>
+		<code>less Test_file_genomics_data.txt</code><br>
+                This file contains population pairwise genome-wide statistics (FST, DXY, nucleotide diversity per population) calculated on 10 Kb windows.<br>
+                ‘scaffold’ specifies the linkage group or chromosome<br>
+                ‘Start’ &amp; ‘End’ specify the start and end position of the window<br>
+                ‘FST’ &amp; ‘DXY’ represent relative and absolute genomic differentiation measures<br>
+                ‘Set1_pi’ &amp; ‘Set2_pi’ correspond to the nucleotide diversity for population 1 and population 2, respectively<br>
+	</div></div>
+<p class="">
+</p><p><code>head</code> will print the first 10 lines of a file on the prompt<br>
+<code>tail</code> will print the last 10 lines of a file on the prompt
+</p>
+<p><ques>Q</ques> print the first 25 lines of the example file <code>Test_file_genomics_data.txt</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>head -n 25 Test_file_genomics_data.txt</code><br>
+	</div></div>
+<p><ques>Q</ques> print the last 50 lines of the example file <code>Test_file_genomics_data.txt</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>tail -n 50 Test_file_genomics_data.txt</code><br>
+	</div></div>
+<p class="">
+</p>
+<p><code>grep</code> is a tool for searching files for a specific content. It has many powerful applications, the basics of which will be explained here.</p>
+<p>The basic syntax of grep is
+</p>
+<p><code>grep 'search pattern' 'filename'</code></p>
+<p><ques>Q</ques> Print all the lines that contain LG13 from the file <code>Test_file_genomics_data.txt</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>grep 'LG13' Test_file_genomics_data.txt</code><br>
+	</div></div>
+<p><ques>Q</ques> How many lines contain LG20 in the file <code>Test_file_genomics_data.txt</code>?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>grep -c 'LG20' Test_file_genomics_data.txt</code><br>
+Use <code>grep --help</code> to obtain information about the flag <code>-c</code>. It stands for “count”.<br>
+	</div></div>
+<p><ques>Q</ques> Print three lines that come before and three lines after the pattern ‘scaffold’ in the file <code>Test_file_genomics_data.txt</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>grep -B 3 'scaffold' Test_file_genomics_data.txt</code><br>
+		<code>grep -A 3 'scaffold' Test_file_genomics_data.txt</code><br>
+		You can also use the <code>-C</code> flag to print the lines before and after simultaneously.<br>
+	</div></div>
+<p><ques>Q</ques> Print all the lines that do not contain LG in the file <code>Test_file_genomics_data.txt</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>grep -v 'LG' Test_file_genomics_data.txt</code><br>
+Use <code>grep --help</code> to obtain information about the flag <code>-v</code>. It stands for “invert-match”.<br>
+	</div></div>
+<p class="">
+</p>
+<p><code>cut</code> allows you to extract a specific column from a file. By default, the column delimiter is TAB. You can change this using <code>-d</code>
+</p>
+<p><ques>Q</ques> Print the column 5 of the test file </p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cut -f 5 Test_file_genomics_data.txt</code><br>
+	</div></div>
+<p class="">
+</p><p><code>wc</code> counts the number of lines, characters or words in a file
+</p>
+<p><ques>Q</ques> How many lines has the test file?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>wc -l Test_file_genomics_data.txt</code><br>
+	</div></div>
+<p class="">
+</p><p><code>sort</code> will sort lines of a text file
+</p>
+<p><ques>Q</ques> Sort the test file by increasing Fst value</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>sort -g -k 4 Test_file_genomics_data.txt </code><br>
+                <code>-g</code> applies for a general numeric sort<br>
+                <code>-k</code> specifies the column in which the values should be sorted<br>
+	</div></div>
+<p class="">
+</p><p><code>sed</code> has many powerful applications including the replacement of one block of text with another.<br>
+The syntax for this is:
+</p>
+<p><code>sed 's/'pattern to find'/'text to replace it with'/g' 'filename' </code></p>
+<p>This will output the changed file contents to the screen.</p>
+<p>If we want to redirect the output to a new file we can use <code> &gt; </code>, for example:</p>
+<p><code>sed 's/'pattern to find'/'text to replace it with'/g' 'filename' &gt; 'new_filename.txt' </code></p>
+<p><ques>Q</ques> Change the text ‘LG’ to ‘LinkageGroup’ on every line of the test file and redirect the output to a new file called <code>Test_file_genomics_data_renamed.txt</code>. Then visually inspect the file to check if it worked.</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>sed 's/LG/LinkageGroup/g' Test_file_genomics_data.txt &gt; Test_file_genomics_data_renamed.txt </code><br>
+		<code>head Test_file_genomics_data_renamed.txt </code><br>
+		<code>tail Test_file_genomics_data_renamed.txt </code><br>
+	</div></div>
+<p class="">
+</p><p>The pipe <code>|</code> is a very useful key that sends the output from one unix command as input into another command, for example:
+</p>
+<p><code>grep 'LG12' Test_file_genomics_data.txt | head </code></p>
+<p><ques>Q</ques> Create a new file containing the last five lines of the column two of the example file <code>Test_file_genomics_data.txt</code> using a single command line.</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		<code>cut -f 2 Test_file_genomics_data.txt | tail -n 5 &gt; New_file.txt </code><br>
+	</div></div>
+<p class="">
+</p><p> It is often useful to copy a file from a remote system (e.g., the amazon server) to a local system (e.g., your computer), and vice-versa.<br>
+To do this, a useful command is <code>scp</code>, that stands for ‘Secure Copy Protocol’. It works like <code>cp</code> in the sense that both commands require a source and a destination location for the copy operation; the difference is that with <code>scp</code>, one or both of the locations are on a remote system and requires authentication.<br>
+This example would copy a file from your personal computer to the amazon server:
+</p>
+<p><code> scp 'source_path/FILE_NAME.txt' 'wpsg@ec2-XX-XXX-XXX-XXX.compute-1.amazonaws.com:/destination_path/' </code></p>
+<p><ques>Q</ques> Copy Test_file_genomics_data.txt to your local system (home directory) [hint: you will have to do that from your local system]
+</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+		First you have to open a new terminal window.<br>
+		Then type: <code>scp wpsg@ec2-XX-XXX-XXX-XXX.compute-1.amazonaws.com:/home/wpsg/workshop_materials/19_unix_primer/Test_file_genomics_data.txt ~ </code><p></p>
+<p>! Please remember that we ask you <b>NOT</b> to download larger files from the Amazon instances to your computer since this is quiet expensive (downloading smaller files like scripts or personal notes, as well as uploading <b>to</b> the Amazon instance is OK). We will provide a link to download the workshop material (including e.g., input files, templates, etc) at the end of the workshop.<br>
+	</p></div></div>
+<hr>
+<p><!-- ---------- Exercise 7 ---------- --><br>
+<b> 7) Tips and tricks <a name="ex7"></a></b></p>
+<p><b>7.1 Tab completion &amp; up-arrow.</b><br>
+The tab button can be used to complete a file or directory name and to do a quick lookup of commands. If, for example, a file has a very long name, you can save time by using the tab completion.<br>
+Lets say you wanted to copy a file named ‘reallyLongFilename.txt’ to the parent directory, type:<br>
+<code>cp rea</code>… – hit the tab key …</p>
+<p><ques> Q </ques> Create a file called <code>reallyreallyreally_long_filename.txt</code>, then use <code>ls -l</code> and the tab completion to fill in the filename<br>
+<ques> Q </ques> Create another file called <code>reallyreallyreally_extralong_filename.txt</code> and then again type <code>ls -l</code> followed by trying to utilise the tab completion to fill in this even longer filename.</p>
+<p>As you probably found out by doing the above, if there are two or more files that start the same way then tab completion after typing ‘rea’ will not fill in the whole name as there is ambiguity to which file you mean. In this instance pressing tab will fill in as much as it can (in this case ‘reallyreallyreally_’) and stop. Pressing the tab button twice will now display all the options of files that start with those letters, allowing you to see what extra letters you must type to complete the file.<br>
+In this case you can type an extra ‘e’ (giving you ‘reallyreallyreally_e’) and then hit tab and it will complete it for you.</p>
+<p>Finally, the <code>up-arrow</code> key is very useful because pressing it repeatedly shows you the history of the commands you typed in the terminal previously.<br>
+	<br></p>
+<p><b>7.2 Don’t loose your job – use <code>screen</code></b><br>
+While working on a remote server, <code>screen</code> is very helpful to have multiple running jobs in multiple ‘windows’ at the same time and don’t loose them in case your local computer crashes or you lose the connection.</p>
+<p><ques> Q </ques> Type <code>screen</code> in your terminal and press <code>ENTER</code>.<br>
+Start a long process e.g., a ‘word count’ on a large(ish) VCF file: <code>zcat ~/workshop_materials/19_unix_primer/data.vcf.gz | wc</code>.<br>
+Detach from the screen by pressing (simultaneously) the keys: <code>control a d</code>. Do the same again – i.e. open another screen and start a long job.</p>
+<p>If you intent to have multiple screens and run different jobs on them it could be useful to specify a meaningful name for the different sessions, this way you know which job you are running in each screen, you can do that by using the <code>-S</code> flag, like <code>screen -S</code> and then type the name you want to give the session. </p>
+<p>To list all running screens you can use <code>screen -list</code> or <code>screen -r</code></p>
+<p>To re-attach your screen, type <code>screen -r</code> followed by the screen name, if you named it when starting the screen session, otherwise you can use the first digits that are listed in the first column after using the <code>screen -r</code> command. </p>
+<p>To exit the screen, type <code>exit</code> within the screen. If only one screen is open, screen -r will directly re-attach you with this screen. After your ‘long jobs’ are finished, exit both screens by typing <code>exit</code> while being attached to the screen.<br>
+	<br></p>
+<p><b>7.3 Changing folder permissions</b></p>
+<p><ques> Q </ques> Type <code>ls -l</code> in the folder <code>~/workshop_materials/19_unix_primer</code>. What information does the first column of the output contain? What is the meaning of the 3rd and 4th column?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code style="color: #4d4d4d;">-rw-r--r-- 1 wpsg workshop   5003911 Jun  4 11:03 Test_file_genomics_data.txt</code><br>
+<code style="color: #4d4d4d;">-rw-r--r-- 1 wpsg workshop 184547450 Jun  4 16:00 data.vcf.gz</code><p></p>
+<p>	The first column tells you about the permission rights in symbolic notation:<br>
+	The first character just indicates the file type (‘-‘ regular file, ‘d’ directory file). The remaining nine characters are in three sets, each representing a class of permissions as three characters. The first set represents the ‘user’ class (what the owner can do), the second the ‘group’ class (what the group members can do), and the third class the ‘others’ class (what other users can do). Within each triad, the first character ‘r’ indicates read access, the second ‘w’ write access, and the third ‘x’ executable.</p>
+<p>	The third column tells you the name of the file ‘owner’, and the 4th thd name of the file ‘group’.<br>
+</p></div></div>
+<p class="">
+</p><p><ques> Q </ques> Which rights do you have as an ‘owner’ for the file: <code style="color: #4d4d4d;">-rwxr-xr--</code>. Which rights do you have as group member, or as ‘other’?</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	The owner has full permissions (rwx), the group member can read and execute the file, and all other can only read the file.<br>
+</div></div>
+<p class="">
+</p><p>Access rights can be changed using the <code>chmod</code> command, followed by a numerical code for the file permissions, and then the file name. You can learn the numerical code, or use <a href="https://web.archive.org/web/20260612210746/http://www.onlineconversion.com/html_chmod_calculator.htm" target="_blank" rel="noopener noreferrer">chmod calculator</a>.</p>
+<p><ques> Q </ques> Create a file <code>touch some_file.txt</code>, type <code>ls -l</code> to see who is the owner and the group, and which rights they have. Change the access rights of this file to <code style="color: #4d4d4d;">-rw-rw----</code>. Type <code>ls -l</code> again to see if the command took effect.</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>chmod 660 some_file.txt</code><br>
+</div></div>
+<p class="">
+</p><p><b>7.4 awk – a stream programming language</b></p>
+<p><code> awk </code> has the general structure of:</p>
+<p><code> awk 'pattern' {action} </code></p>
+<p><code> awk </code> is column (field) aware:<br>
+<code>$1</code> corresponds to the first column<br>
+<code>$2</code> corresponds to the second column<br>
+<code>$3</code> corresponds to the third column<br>
+etc.<br>
+<code>$0</code> corresponds to the whole line</p>
+<p>‘pattern’ can be any logical statement:<br>
+<code>$3 &gt; 0 </code> – if column 3 is greater than 0<br>
+<code>$1 == 32 </code> – if column 1 equals 32<br>
+<code>$1 == $3 </code> – if column 1 equals column 3<br>
+<code>$1 == "consensus" </code> – if column 1 contains the string “consensus”</p>
+<p>if ‘pattern’ is true, then everything in {…} is executed </p>
+<p><ques> Q </ques> Print the lines corresponding to the first 100 kb of LG7 from the file Test_file_genomics_data.txt using <code>awk</code></p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>awk ' $1 == "LG7"' Test_file_genomics_data.txt | awk '$2 &lt; 100000'</code><p></p>
+<p>	We can first select the lines corresponding to LG7 and then print the ones corresponding to the windows whose start coordinates are smaller than 100000 bp<br>
+</p></div></div>
+<p class="">
+</p><p>	<br></p>
+<p><b>7.5 Repeating commands using loops</b></p>
+<p>One of the really powerful things you can do in the terminal is the ability to repeat commands on multiple targets. For example creating many folders, moving multiple files into each folder, running commands and pipelines (sequences of commands) on multiple files/samples etc.<br>
+This can be accomplished by using the so called 'for loop'. For loops use two features of the shell that have not been covered before: variables and wildcards.</p>
+<p>7.5.1 Variables</p>
+<p>A variable in the terminal shell can be seen as a placeholder for some text, such as a directory name, filename, number, sentence etc.<br>
+A variable is initialised using the name you designate for it. The name can be whatever you want (e.g. 'direc', 'superman', 'x', 'file' etc.) as long as it is a single word without spaces or special characters. The variable is then addressed using $ in front of its name. For example, if the variable is named 'direc' it is referenced using <code>$direc</code>.</p>
+<p>The contents of the variable can be changed within a loop automatically without having to do so yourself manually.</p>
+<p>7.5.2 Wildcards</p>
+<p>The asterisk <code>*</code> is referred to as a <a href="https://web.archive.org/web/20260612210746/https://kb.iu.edu/d/ahsf">'wildcard'</a> symbol in unix. It allows for matching of filenames, directories etc. that have a certain sections of their name in common.<br>
+For example, if the names of all the files you are interested in start with ‘result’ (e.g. result.txt, result.tree, result.nexus, resultFile, result) these will all be recognised using result*.<br>
+Alternatively, if all files of interest end with .txt, you can loop over all of them using *.txt</p>
+<p>Both variables and wildcards are used in for loops to maximise their power. </p>
+<p>A for-loop has the syntax:</p>
+<p><code>for 'variable' in 'list'<br>
+do<br>
+'tasks to repeat for each item in list'<br>
+done</code></p>
+<p>Each section is written on a separate line (e.g. after ‘do’ hit enter’) and instead of a prompt the terminal will display a &gt; to designate you are in a multi-line command.<br>
+Alternatively, you can place a loop into a single line using the ; symbol to separate the commands, except for the line break after the 'do' where there should not be a ;</p>
+<p>For example, we can use the command ‘echo’ to print something to the screen. This is used like</p>
+<p><code> echo ‘hello’</code></p>
+<p>which will print hello to the terminal.</p>
+<p>We can also define a variable which content would be the word 'hello'</p>
+<p><code>my_variable='hello'</code> and print the content of the variable in the screen with <code>echo $my_variable</code></p>
+<p>We can use a for-loop to print the number 1 to 10 to screen by typing</p>
+<p><code>for num in {1..10}<br>
+do<br>
+echo ${num}<br>
+done</code></p>
+<p>This loop starts at 1, places the number in the variable num which can then be accessed inside the loop through ${num}.</p>
+<p><ques> Q </ques> Write the same loop as above on one line</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>for num in {1..10};do echo ${num};done;</code><p></p>
+<p>	Note the lack of semi-colon after ‘do’<br>
+</p></div></div>
+<p><ques> Q </ques> Use a loop to create 3 directories which will be named run1, run2 and run3</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>for num in {1..3};do mkdir "run"${num};done;</code><p></p>
+<p>	We place 'run' before the variable to tell the system we want this string to be placed before the variable as part of the directory name. If we wanted it placed after (e.g. create 1run etc.) we could use ${num}"run"<br>
+</p></div></div>
+<p>	<br></p>
+<p><b>7.6 Output redirection</b><br>
+You already learned how to redirect the output of a command to a file using the <code>&gt;</code>. Instead of writing to a new file, you can also append to an existing file by using <code>&gt;&gt;</code> </p>
+<p><ques> Q </ques> Append 'This is cool!' to the 'some_file.txt' that you created above. Check if the contend has been changed using <code>less</code>.<br>
+</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>echo 'This is cool!' &gt;&gt; some_file.txt</code><br>
+</div></div>
+<p class="">
+</p><p>The default output that is written to the screen and that you redirect to a file is called the 'stdout' (standard out). In addition, there are two more default standard files: 'stdin' (standard input) - the default place where commands listen for information, and 'stderr' (standard error) - used to write error messages. </p>
+<p><ques> Q </ques> Produce a stderr output.<br>
+</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	For example, a 'stderr' can be produced by <code>less some_file_that_does_not_exist</code><br>
+	<code style="color: #4d4d4d;">some_file_that_does_not_exist: No such file or directory</code><br>
+</div></div>
+<p class="">
+</p><p>To save the 'stderr' message, you need to redirect the 'stderr' to a file by adressing it using a stream number.<br>
+<code>1&gt;</code> will redirect your 'stdout',<br>
+<code>2&gt;</code> will redirect your 'stderr',<br>
+<code>&amp;&gt;</code> will redirect 'stdout' and 'stderr'.</p>
+<p><ques> Q </ques> Save the stderr of the 'less' example above to a file.<br>
+</p><div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>less some_file_that_does_not_exist 2&gt; error_msg.txt</code><br>
+</div></div>
+<p class="">
+</p><p>Instead of writing the stdout/stderr to the screen or to a file, you can also immediately delete it by redirecting the output to <code>&gt; /dev/null</code>.<br>
+<code>less some_file_that_does_not_exist 2&gt; /dev/null</code></p>
+<p><!-- ---------- Exercise 8 ---------- --><br>
+<b> 8) Writing a script <a name="ex8"></a></b></p>
+<p>Now what if we want to save some of the commands and run them automatically without the need to type them all over again? or for example to apply the same commands later to new files? For that we can write a bash script.</p>
+<p><ques> Q </ques> Start by creating an empty file and name it 'my_script.sh' then modify the content of the file, using <code>nano</code>, by including the for loop we used before:</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>touch my_script.sh</code><br>
+	<code>nano my_script.sh</code><br>
+</div></div>
+<p class="">
+</p><p>You can write the following in your script:</p>
+<p>	<code>#!/bin/sh<br>
+	# a for-loop to print text and numbers from 0 to 10<br>
+	for num in {1..10}; do<br>
+	echo 'day '${num} ':has been cool!'<br>
+	done</code></p>
+<p>Using the '#' we can write notes in our script. They can be a small description of what the script is about.<br>
+Save and exit the script. <code>ctrl o</code> to save. ENTER to validate saving. <code>ctrl x</code> to exit</p>
+<p><ques> Q </ques> This script will print out a series from 0 to 10 with the text 'day 1 :has been cool!'. Lets execute the script and see the output. To execute our script we can use the command: </p>
+<p><code>bash my_script.sh</code></p>
+<p>This will print out in the screen the result of our for loop command.<br>
+Instead of printing it in the screen we could save the output in a file just by using the &gt;&gt; to redirect the output. </p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+<p>	Modify your script by adding &gt;&gt; after the loop and specify a file where the output would be saved.</p>
+<p>	<code>#!/bin/sh<br>
+	# a for-loop to print text and numbers from 0 to 10<br>
+	for num in {1..10}; do<br>
+	echo 'day '${num} ':has been cool!'<br>
+	done &gt;&gt; my_output.txt</code><br>
+</p></div></div>
+<p class="">
+</p><p>Check the output file that was created with <code>less my_output.txt</code></p>
+<p>We can go a bit further and modify our script to make it interactive by allowing the script to get some of its arguments directly in the command line.<br>
+Modify the script by replacing ':has been cool!' by ${1} and my_output by ${2}:</p>
+<p>	<code>#!/bin/sh<br>
+	# a for-loop to print text and numbers from 0 to 10<br>
+	for num in {1..10}; do<br>
+	echo 'day '${num} ${1}<br>
+	done &gt;&gt; ${2}.txt</code></p>
+<p>Save the changes and exit the script.</p>
+<p>The <code>${1}</code> and <code>${2}</code> variables correspond to the first and second argument we will specify in the command line when running the script. Let's say we want to specify a different text for the result of the day ':has been cool!' and change it to 'great' and to save it in a different file called 'output2.txt', then we need to provide those arguments in the command line.</p>
+<p>	<code>bash my_script.sh great output2</code></p>
+<p>Now the new output file 'output2.txt' should have the word 'great' instead of the initial ':has been cool!'.</p>
+<p><ques> Q </ques> Compare 'my_output.txt' and 'output2.txt'</p>
+<div class="olympus-toggle "><h3 class="olympus-toggle-trigger">Show me the answer!</h3><div class="olympus-toggle-container">
+	<code>cat my_output.txt</code><br>
+	<code>cat output2.txt</code><br>
+</div></div>
+<p class="">
+</p><hr>
+<p><!-- ---------- Extra Exercise ---------- --></p>
+<p>R language will be also heavily used during the workshop, if you do not know R you can check the  <a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2020-population-and-speciation-genomics/r-activity/" rel="noopener noreferrer" target="_blank">R primer</a> as well.</p>
+<hr>
+<p></p>
+			</div>
+</article>
+
+
+						
+					
+				</main>
+			</div>
+
+            
+		</div>
+	</div>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+							<div class="footer-connect">
+				<div class="container">
+					<div class="row">
+														<div class="col-md-4 offset-md-2 col-sm-6 offset-md-0">
+												<div class="footer-subscribe">
+				<h5 class="follow-heading">Join our Newsletter</h5>				<form novalidate="" target="_blank" class="" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form" method="post" action="https://web.archive.org/web/20260612210746/https://evomics.us2.list-manage.com/subscribe/post?u=f038cf4a11b514ca20c002368&amp;id=96b73148b3">
+					<input type="text" placeholder="Enter your e-mail address" id="mce-EMAIL" class="subs_input" name="EMAIL" value="">
+					<input type="submit" class="subs-button" value="Subscribe" name="subscribe">
+				</form>
+			</div>
+										</div>
+															<div class="col-md-4 col-sm-6">
+												<div class="footer-social">
+				<h5 class="follow-heading">Keep Updated</h5><div class="footer-social-icons"><a target="_blank" href="https://web.archive.org/web/20260612210746/https://bsky.app/profile/evomics.bsky.social" title="Bluesky"><i class="fa fa-solid fa-link"></i></a><a target="_blank" href="https://web.archive.org/web/20260612210746/https://www.linkedin.com/company/evomics-workshops" title="LinkedIn"><i class="fa fa-brands fa-linkedin"></i></a><a target="_blank" href="https://web.archive.org/web/20260612210746/https://www.facebook.com/groups/159177540764426/" title="Facebook"><i class="fa fa-facebook"></i></a></div>			</div>
+										</div>
+											</div>
+				</div>
+			</div>
+	
+		<div class="site-info">
+			<div class="container">
+									<div class="btt">
+						<a class="back-to-top" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#page" title="Back To Top"><i class="fa fa-angle-double-up wow flash" data-wow-duration="2s"></i></a>
+					</div>
+											Copyright © 2026 Evolution and Genomics			<span class="sep"> – </span>
+			<a href="https://web.archive.org/web/20260612210746/https://www.famethemes.com/themes/onepress">OnePress</a> theme by FameThemes					</div>
+		</div>
+
+	</footer>
+	</div>
+
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/onepress/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<div id="jp-carousel-loading-overlay">
+			<div id="jp-carousel-loading-wrapper">
+				<span id="jp-carousel-library-loading">&nbsp;</span>
+			</div>
+		</div>
+		<div class="jp-carousel-overlay" style="display: none;">
+
+		<div class="jp-carousel-container">
+			<!-- The Carousel Swiper -->
+			<div class="jp-carousel-wrap swiper jp-carousel-swiper-container jp-carousel-transitions" itemscope="" itemtype="https://schema.org/ImageGallery">
+				<div class="jp-carousel swiper-wrapper"></div>
+				<div class="jp-swiper-button-prev swiper-button-prev">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskPrev" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="9" height="12">
+							<path d="M16.2072 16.59L11.6496 12L16.2072 7.41L14.8041 6L8.8335 12L14.8041 18L16.2072 16.59Z" fill="white"></path>
+						</mask>
+						<g mask="url(#maskPrev)">
+							<rect x="0.579102" width="23.8823" height="24" fill="#FFFFFF"></rect>
+						</g>
+					</svg>
+				</div>
+				<div class="jp-swiper-button-next swiper-button-next">
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<mask id="maskNext" mask-type="alpha" maskUnits="userSpaceOnUse" x="8" y="6" width="8" height="12">
+							<path d="M8.59814 16.59L13.1557 12L8.59814 7.41L10.0012 6L15.9718 12L10.0012 18L8.59814 16.59Z" fill="white"></path>
+						</mask>
+						<g mask="url(#maskNext)">
+							<rect x="0.34375" width="23.8822" height="24" fill="#FFFFFF"></rect>
+						</g>
+					</svg>
+				</div>
+			</div>
+			<!-- The main close buton -->
+			<div class="jp-carousel-close-hint">
+				<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<mask id="maskClose" mask-type="alpha" maskUnits="userSpaceOnUse" x="5" y="5" width="15" height="14">
+						<path d="M19.3166 6.41L17.9135 5L12.3509 10.59L6.78834 5L5.38525 6.41L10.9478 12L5.38525 17.59L6.78834 19L12.3509 13.41L17.9135 19L19.3166 17.59L13.754 12L19.3166 6.41Z" fill="white"></path>
+					</mask>
+					<g mask="url(#maskClose)">
+						<rect x="0.409668" width="23.8823" height="24" fill="#FFFFFF"></rect>
+					</g>
+				</svg>
+			</div>
+			<!-- Image info, comments and meta -->
+			<div class="jp-carousel-info">
+				<div class="jp-carousel-info-footer">
+					<div class="jp-carousel-pagination-container">
+						<div class="jp-swiper-pagination swiper-pagination"></div>
+						<div class="jp-carousel-pagination"></div>
+					</div>
+					<div class="jp-carousel-photo-title-container">
+						<h2 class="jp-carousel-photo-caption"></h2>
+					</div>
+					<div class="jp-carousel-photo-icons-container">
+						<a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" class="jp-carousel-icon-btn jp-carousel-icon-info" aria-label="Toggle photo metadata visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskInfo" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M12.7537 2C7.26076 2 2.80273 6.48 2.80273 12C2.80273 17.52 7.26076 22 12.7537 22C18.2466 22 22.7046 17.52 22.7046 12C22.7046 6.48 18.2466 2 12.7537 2ZM11.7586 7V9H13.7488V7H11.7586ZM11.7586 11V17H13.7488V11H11.7586ZM4.79292 12C4.79292 16.41 8.36531 20 12.7537 20C17.142 20 20.7144 16.41 20.7144 12C20.7144 7.59 17.142 4 12.7537 4C8.36531 4 4.79292 7.59 4.79292 12Z" fill="white"></path>
+									</mask>
+									<g mask="url(#maskInfo)">
+										<rect x="0.8125" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+							</span>
+						</a>
+												<a href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" class="jp-carousel-icon-btn jp-carousel-icon-comments" aria-label="Toggle photo comments visibility">
+							<span class="jp-carousel-icon">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="maskComments" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="21" height="20">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M4.3271 2H20.2486C21.3432 2 22.2388 2.9 22.2388 4V16C22.2388 17.1 21.3432 18 20.2486 18H6.31729L2.33691 22V4C2.33691 2.9 3.2325 2 4.3271 2ZM6.31729 16H20.2486V4H4.3271V18L6.31729 16Z" fill="white"></path>
+									</mask>
+									<g mask="url(#maskComments)">
+										<rect x="0.34668" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+
+								<span class="jp-carousel-has-comments-indicator" aria-label="This image has comments."></span>
+							</span>
+						</a>
+											</div>
+				</div>
+				<div class="jp-carousel-info-extra">
+					<div class="jp-carousel-info-content-wrapper">
+						<div class="jp-carousel-photo-title-container">
+							<h2 class="jp-carousel-photo-title"></h2>
+						</div>
+						<div class="jp-carousel-comments-wrapper">
+															<div id="jp-carousel-comments-loading">
+									<span>Loading Comments...</span>
+								</div>
+								<div class="jp-carousel-comments"></div>
+								<div id="jp-carousel-comment-form-container">
+									<span id="jp-carousel-comment-form-spinner">&nbsp;</span>
+									<div id="jp-carousel-comment-post-results"></div>
+																														<form id="jp-carousel-comment-form">
+												<label for="jp-carousel-comment-form-comment-field" class="screen-reader-text">Write a Comment...</label>
+												<textarea name="comment" class="jp-carousel-comment-form-field jp-carousel-comment-form-textarea" id="jp-carousel-comment-form-comment-field" placeholder="Write a Comment..."></textarea>
+												<div id="jp-carousel-comment-form-submit-and-info-wrapper">
+													<div id="jp-carousel-comment-form-commenting-as">
+																													<fieldset>
+																<label for="jp-carousel-comment-form-email-field">Email</label>
+																<input type="text" name="email" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-email-field">
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-author-field">Name</label>
+																<input type="text" name="author" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-author-field">
+															</fieldset>
+															<fieldset>
+																<label for="jp-carousel-comment-form-url-field">Website</label>
+																<input type="text" name="url" class="jp-carousel-comment-form-field jp-carousel-comment-form-text-field" id="jp-carousel-comment-form-url-field">
+															</fieldset>
+																											</div>
+													<input type="submit" name="submit" class="jp-carousel-comment-form-button" id="jp-carousel-comment-form-button-submit" value="Post Comment">
+												</div>
+											</form>
+																											</div>
+													</div>
+						<div class="jp-carousel-image-meta">
+							<div class="jp-carousel-title-and-caption">
+								<div class="jp-carousel-photo-info">
+									<h3 class="jp-carousel-caption" itemprop="caption description"></h3>
+								</div>
+
+								<div class="jp-carousel-photo-description"></div>
+							</div>
+							<ul class="jp-carousel-image-exif" style="display: none;"></ul>
+							<a class="jp-carousel-image-download" href="https://web.archive.org/web/20260612210746/https://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/#" target="_blank" style="display: none;">
+								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="19" height="18">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M5.84615 5V19H19.7775V12H21.7677V19C21.7677 20.1 20.8721 21 19.7775 21H5.84615C4.74159 21 3.85596 20.1 3.85596 19V5C3.85596 3.9 4.74159 3 5.84615 3H12.8118V5H5.84615ZM14.802 5V3H21.7677V10H19.7775V6.41L9.99569 16.24L8.59261 14.83L18.3744 5H14.802Z" fill="white"></path>
+									</mask>
+									<g mask="url(#mask0)">
+										<rect x="0.870605" width="23.8823" height="24" fill="#FFFFFF"></rect>
+									</g>
+								</svg>
+								<span class="jp-carousel-download-text"></span>
+							</a>
+							<div class="jp-carousel-image-map" style="display: none;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+			<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script type="text/javascript" src="./0.5_UnixPrimer_files/core.min.js" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/accordion.min.js" id="jquery-ui-accordion-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/tabs.min.js" id="jquery-ui-tabs-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/lightgallery.minified.js" id="onepress-lightgallery-js"></script>
+<script type="text/javascript" id="onepress-theme-js-extra">
+/* <![CDATA[ */
+var onepress_js_settings = {"onepress_disable_animation":"1","onepress_disable_sticky_header":"","onepress_vertical_align_menu":"","hero_animation":"fadeIn","hero_speed":"0","hero_fade":"750","submenu_width":"0","hero_duration":"5000","hero_disable_preload":"","disabled_google_font":"","is_home":"","gallery_enable":"","is_rtl":"","parallax_speed":"0.5"};
+//# sourceURL=onepress-theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/theme.minified.js" id="onepress-theme-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/woocommerce-analytics-client.js" id="woocommerce-analytics-client-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/sourcebuster.min.js" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://web.archive.org/web/20260612210746/https://evomics.org/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/order-attribution.min.js" id="wc-order-attribution-js"></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"26759860","post":"20683","tz":"-5","srv":"evomics.org","j":"1:15.7.1"} ]);
+_stq.push([ "clickTrackerInit", "26759860", "20683" ]);
+//# sourceURL=jetpack-stats-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/e-202624.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="jetpack-carousel-js-extra">
+/* <![CDATA[ */
+var jetpackSwiperLibraryPath = {"url":"https://web.archive.org/web/20260612210746/https://evomics.org/wp-content/plugins/jetpack/_inc/blocks/swiper.js"};
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https://web.archive.org/web/20260612210746/https://evomics.org/wp-admin/admin-ajax.php","nonce":"628c26a42e","display_exif":"1","display_comments":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","image_label":"Open image in full-screen.","download_original":"View full size \u003Cspan class=\"photo-size\"\u003E{0}\u003Cspan class=\"photo-size-times\"\u003E\u00d7\u003C/span\u003E{1}\u003C/span\u003E","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"0","login_url":"https://web.archive.org/web/20260612210746/https://evomics.org/wp-login.php?redirect_to=https%3A%2F%2Fevomics.org%2Flearning%2Fpopulation-and-speciation-genomics%2F2025-population-and-speciation-genomics%2Funix-primer%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"]};
+//# sourceURL=jetpack-carousel-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/jetpack-carousel.min.js" id="jetpack-carousel-js"></script>
+<script type="text/javascript" src="./0.5_UnixPrimer_files/scripts.js" id="olympus-shortcode-scripts-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://web.archive.org/web/20260612210746/https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://web.archive.org/web/20260612210746/https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://web.archive.org/web/20260612210746/https://evomics.org/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">var _____WB$wombat$assign$function_____=function(name){return (globalThis._wb_wombat && globalThis._wb_wombat.local_init && globalThis._wb_wombat.local_init(name))||globalThis[name];};if(!globalThis.__WB_pmw){globalThis.__WB_pmw=function(obj){this.__WB_source=obj;return this;}}var window = _____WB$wombat$assign$function_____("window");
+var self = _____WB$wombat$assign$function_____("self");
+var document = _____WB$wombat$assign$function_____("document");
+var location = _____WB$wombat$assign$function_____("location");
+var top = _____WB$wombat$assign$function_____("top");
+var parent = _____WB$wombat$assign$function_____("parent");
+var frames = _____WB$wombat$assign$function_____("frames");
+var opener = _____WB$wombat$assign$function_____("opener");
+
+/* <![CDATA[ */
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://evomics.org/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+		<script type="text/javascript">
+			(function() {
+				window.wcAnalytics = window.wcAnalytics || {};
+				const wcAnalytics = window.wcAnalytics;
+
+				// Set the assets URL for webpack to find the split assets.
+				wcAnalytics.assets_url = 'https://web.archive.org/web/20260612210746/https://evomics.org/wp-content/plugins/jetpack/jetpack_vendor/automattic/woocommerce-analytics/src/../build/';
+
+				// Set the REST API tracking endpoint URL.
+								wcAnalytics.trackEndpoint = "https://web.archive.org/web/20260612210746/https://evomics.org/wp-json/woocommerce-analytics/v1/track";
+
+				// Set common properties for all events.
+				wcAnalytics.commonProps = {"session_id":null,"landing_page":null,"is_engaged":null,"ui":0,"blog_id":26759860,"store_id":"8d00fa41-a9b8-4c27-bf68-20e203970115","url":"https://web.archive.org/web/20260612210746/https://evomics.org","woo_version":"10.7.0","wp_version":"6.9.4","store_admin":0,"device":"desktop","store_currency":"USD","timezone":"America/Chicago","is_guest":1,"_via_ua":"CCBot/2.0 (https://commoncrawl.org/faq/)","_via_ip":"2600:1f28:365:80b0:b65d:9ae0:766c:a072","_lg":"en-US","_dr":"","_dl":"https://web.archive.org/web/20260612210746/http://evomics.org/learning/population-and-speciation-genomics/2025-population-and-speciation-genomics/unix-primer/","_via_ref":""};
+
+				// Set the event queue.
+				wcAnalytics.eventQueue = [];
+
+				// Features.
+				wcAnalytics.features = {
+					ch: false,
+					sessionTracking: false,
+					proxy: false,
+				};
+
+				wcAnalytics.breadcrumbs = ["LEARNING","Population and Speciation Genomics","Population and Speciation Genomics 2025","UNIX primer"];
+
+				// Page context flags.
+				wcAnalytics.pages = {
+					isAccountPage: false,
+					isCart: false,
+				};
+			})();
+		</script>
+		
+
+
+
+</body></html>
